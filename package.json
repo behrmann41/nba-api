@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test" : "NODE_ENV=test mocha"
+    "test": "NODE_ENV=test mocha"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "chai": "^3.4.1",
+    "csv": "^0.4.6",
     "mocha": "^2.3.4",
     "supertest": "^1.1.0"
   }

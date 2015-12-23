@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: function(queryInterface, Sequelize) {
-    return queryInterface.createTable('Players', {
+    return queryInterface.createTable('players', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -11,7 +11,7 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      draftyear: {
+      draftYear: {
         type: Sequelize.INTEGER
       },
       heightWithOutShoes: {
@@ -30,22 +30,22 @@ module.exports = {
         type: Sequelize.STRING
       },
       bodyFat: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
       },
       handLength: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
       },
       handWidth: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
       },
       noStepVert: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
       },
       noStepVertReach: {
         type: Sequelize.STRING
       },
       maxVert: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
       },
       maxVertReach: {
         type: Sequelize.STRING
@@ -54,16 +54,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       agility: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
       },
       sprint: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
       },
       rank: {
         type: Sequelize.INTEGER
       },
       draftPos: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
@@ -76,6 +76,6 @@ module.exports = {
     });
   },
   down: function(queryInterface, Sequelize) {
-    return queryInterface.dropTable('Players');
+    return queryInterface.dropTable('players');
   }
 };
