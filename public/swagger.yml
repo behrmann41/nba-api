@@ -1,0 +1,135 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Basketball Radar
+  description: >
+    #### NBA Players Combine Metrics
+basePath: /
+parameters:
+#   year:
+#     name: year
+#     in: path
+#     description: The year of the memories
+#     type: integer
+#     required: true
+definitions:
+  PlayersCollection:
+    type: object
+    properties:
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/PlayersResource'
+  PlayersDocument:
+      type: object
+      properties:
+        data:
+          $ref: '#/definitions/PlayersResource'
+  PlayersResource:
+    type: object
+    properties:
+      type:
+        type: string
+        enum:
+        - Player
+      id:
+        type: integer
+      attributes:
+        $ref: '#/definitions/Player'
+  Player:
+    type: object
+    properties:
+      name:
+        type: string
+      draftYear:
+        type: string
+      heightWithOutShoes:
+        type: string
+      heightWithShoes:
+        type: string
+      weight:
+        type: integer
+      wingspan:
+        type: string
+      reach:
+        type: string
+      bodyFat:
+        type: integer
+      handLength:
+        type: integer
+      handWidth:
+        type: integer
+      noStepVert:
+        type: integer
+      noStepVertReach:
+        type: string
+      maxVert:
+        type: integer
+      maxVertReach:
+        type: string
+      bench:
+        type: integer
+      agility:
+        type: integer
+      sprint:
+        type: integer
+      rank:
+        type: integer
+      draftPos:
+        type: string
+  Error:
+    type: object
+    properties:
+      error:
+        type: array
+        items:
+          type: object
+          properties:
+            status:
+              type: string
+            source:
+              type: object
+              properties:
+                pointer:
+                  type: string
+            title:
+              type: string
+            details:
+              type: string
+paths:
+  '/players':
+    get:
+      description: >
+        Lists all Players
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/PlayersCollection'
+  # '/memories/{year}':
+  #   get:
+  #     parameters:
+  #       - $ref: '#/parameters/year'
+  #     description: >
+  #       Lists all memories for a given year
+  #     responses:
+  #       '200':
+  #         description: Success
+  #         schema:
+  #           $ref: '#/definitions/MemoryCollection'
+  # '/memories/years':
+  #   get:
+  #     description: >
+  #       Lists the unique years
+  #     responses:
+  #       '200':
+  #         description: Success
+  #         schema:
+  #           type: object
+  #           properties:
+  #             links:
+  #               $ref: '#/definitions/Links'
+  #             data:
+  #               type: array
+  #               items:
+  #                 type: integer
