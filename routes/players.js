@@ -12,7 +12,7 @@ router.get('/', function (req, res, next) {
 })
 
 router.get('/years', function (req, res, next) {
-  sequelize.query('SELECT DISTINCT "draftYear" FROM players order by "draftYear"').then(function (years) {
+  sequelize.query('SELECT DISTINCT "draftYear" FROM players ORDER BY "draftYear"').then(function (years) {
     res.json(years[0].map(function(record){
       return record.draftYear;
     }));

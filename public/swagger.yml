@@ -106,6 +106,20 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/PlayersCollection'
+  '/players/years':
+    get:
+      description: >
+        Lists the unique years
+      responses:
+        '200':
+          description: Success
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: integer
   # '/memories/{year}':
   #   get:
   #     parameters:
@@ -117,19 +131,3 @@ paths:
   #         description: Success
   #         schema:
   #           $ref: '#/definitions/MemoryCollection'
-  # '/memories/years':
-  #   get:
-  #     description: >
-  #       Lists the unique years
-  #     responses:
-  #       '200':
-  #         description: Success
-  #         schema:
-  #           type: object
-  #           properties:
-  #             links:
-  #               $ref: '#/definitions/Links'
-  #             data:
-  #               type: array
-  #               items:
-  #                 type: integer
