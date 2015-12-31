@@ -11,6 +11,12 @@ router.get('/', function (req, res, next) {
   })
 })
 
+router.get('/columns', function (req, res, next) {
+  sequelize.query('SELECT * FROM players WHERE false').then(function (columns) {
+    res.json(columns)
+  })
+})
+
 router.get('/years', function (req, res, next) {
   sequelize.query('SELECT DISTINCT "draftYear" FROM players ORDER BY "draftYear"').then(function (years) {
     res.json(years[0].map(function(record){
