@@ -6,7 +6,9 @@ var sequelize = new Sequelize('postgres://localhost:5432/nbaplayers-dev', {})
 
 
 router.get('/', function (req, res, next) {
-  models.players.findAll({}).then(function (players) {
+  models.players.findAll({
+    attributes: { exclude: ['createdAt', 'updatedAt']}
+  }).then(function (players) {
     res.json(players);
   })
 })
