@@ -13,6 +13,7 @@ router.get('/', function (req, res, next) {
   })
 })
 
+
 router.get('/columns', function (req, res, next) {
   sequelize.query('SELECT * FROM players WHERE false').then(function (columns) {
     res.json(columns)
@@ -24,6 +25,12 @@ router.get('/years', function (req, res, next) {
     res.json(years[0].map(function(record){
       return record.draftYear;
     }));
+  })
+})
+
+router.get('/player/:id', function (req, res, next) {
+  models.players.findById(req.params.id).then(function (player) {
+    res.json(player);
   })
 })
 
