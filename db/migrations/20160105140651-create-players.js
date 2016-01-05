@@ -17,8 +17,14 @@ module.exports = {
       heightWithOutShoes: {
         type: Sequelize.STRING
       },
+      heightwoshoesinches: {
+        type: Sequelize.FLOAT
+      },
       heightWithShoes: {
         type: Sequelize.STRING
+      },
+      heightinches: {
+        type: Sequelize.FLOAT
       },
       weight: {
         type: Sequelize.INTEGER
@@ -26,8 +32,14 @@ module.exports = {
       wingspan: {
         type: Sequelize.STRING
       },
+      wingspaninches: {
+        type: Sequelize.FLOAT
+      },
       reach: {
         type: Sequelize.STRING
+      },
+      reachinches: {
+        type: Sequelize.FLOAT
       },
       bodyFat: {
         type: Sequelize.FLOAT
@@ -44,11 +56,17 @@ module.exports = {
       noStepVertReach: {
         type: Sequelize.STRING
       },
+      nostepvertreachinches: {
+        type: Sequelize.FLOAT
+      },
       maxVert: {
         type: Sequelize.FLOAT
       },
       maxVertReach: {
         type: Sequelize.STRING
+      },
+      maxvertreachinches: {
+        type: Sequelize.FLOAT
       },
       bench: {
         type: Sequelize.INTEGER

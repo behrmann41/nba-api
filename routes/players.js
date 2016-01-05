@@ -9,7 +9,7 @@ router.get('/', function (req, res, next) {
   models.players.findAll({
     attributes: { exclude: ['createdAt', 'updatedAt']}
   }).then(function (players) {
-    res.json(players);
+    res.json({data: players});
   })
 })
 
