@@ -30,13 +30,6 @@ router.get('/years', function (req, res, next) {
 
 router.get('/player/:id', function (req, res, next) {
   models.players.findById(req.params.id).then(function (player) {
-    // console.log(player);
-    for (attr in player.dataValues){
-      if (player.dataValues[attr] != 0 && attr !== 'id' && attr !== 'name' && attr !== 'draftYear' && attr !== 'draftPos' && attr !== 'createdAt' && attr !== 'updatedAt'){
-        console.log(attr);
-      }
-    }
-
     res.json(player);
   })
 })
