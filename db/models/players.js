@@ -25,7 +25,23 @@ module.exports = function(sequelize, DataTypes) {
     agility: DataTypes.FLOAT,
     sprint: DataTypes.FLOAT,
     rank: DataTypes.INTEGER,
-    draftPos: DataTypes.STRING
+    draftPos: DataTypes.STRING,
+    heightwoshoesinchespercentage: DataTypes.FLOAT,
+    heightinchespercentage: DataTypes.FLOAT,
+    weightpercentage: DataTypes.FLOAT,
+    wingspaninchespercentage: DataTypes.FLOAT,
+    reachinchespercentage: DataTypes.FLOAT,
+    bodyFatpercentage: DataTypes.FLOAT,
+    handLengthpercentage: DataTypes.FLOAT,
+    handWidthpercentage: DataTypes.FLOAT,
+    noStepVertpercentage: DataTypes.FLOAT,
+    nostepvertreachinchespercentage: DataTypes.FLOAT,
+    maxVertpercentage: DataTypes.FLOAT,
+    maxvertreachinchespercentage: DataTypes.FLOAT,
+    benchpercentage: DataTypes.FLOAT,
+    agilitypercentage: DataTypes.FLOAT,
+    sprintpercentage: DataTypes.FLOAT,
+    rankpercentage: DataTypes.FLOAT
   }, {
     classMethods: {
       associate: function(models) {

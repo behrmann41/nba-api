@@ -83,6 +83,54 @@ module.exports = {
       draftPos: {
         type: Sequelize.STRING
       },
+      heightwoshoesinchespercentage: {
+        type: Sequelize.FLOAT
+      },
+      heightinchespercentage: {
+        type: Sequelize.FLOAT
+      },
+      weightpercentage: {
+        type: Sequelize.FLOAT
+      },
+      wingspaninchespercentage: {
+        type: Sequelize.FLOAT
+      },
+      reachinchespercentage: {
+        type: Sequelize.FLOAT
+      },
+      bodyFatpercentage: {
+        type: Sequelize.FLOAT
+      },
+      handLengthpercentage: {
+        type: Sequelize.FLOAT
+      },
+      handWidthpercentage: {
+        type: Sequelize.FLOAT
+      },
+      noStepVertpercentage: {
+        type: Sequelize.FLOAT
+      },
+      nostepvertreachinchespercentage: {
+        type: Sequelize.FLOAT
+      },
+      maxVertpercentage: {
+        type: Sequelize.FLOAT
+      },
+      maxvertreachinchespercentage: {
+        type: Sequelize.FLOAT
+      },
+      benchpercentage: {
+        type: Sequelize.FLOAT
+      },
+      agilitypercentage: {
+        type: Sequelize.FLOAT
+      },
+      sprintpercentage: {
+        type: Sequelize.FLOAT
+      },
+      rankpercentage: {
+        type: Sequelize.FLOAT
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
