@@ -30,8 +30,17 @@ router.get('/years', function (req, res, next) {
 
 router.get('/player/:id', function (req, res, next) {
   models.players.findById(req.params.id).then(function (player) {
+    // console.log(player);
+    for (attr in player.dataValues){
+      if (player.dataValues[attr] != 0 && attr !== 'id' && attr !== 'name' && attr !== 'draftYear' && attr !== 'draftPos' && attr !== 'createdAt' && attr !== 'updatedAt'){
+        console.log(attr);
+      }
+    }
+
     res.json(player);
   })
 })
 
 module.exports = router;
+
+//select * from (select id, weight, ntile(100) over(order by weight) rank from players where weight > 0) ntiles where id = 4151;
