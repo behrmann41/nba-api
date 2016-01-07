@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var models = require('../db/models/index');
 var Sequelize = require('sequelize');
-var sequelize = new Sequelize('postgres://localhost:5432/nbaplayers-dev', {})
+var sequelize = new Sequelize(process.env.DATABASE_URL, {})
 
 
 router.get('/', function (req, res, next) {
